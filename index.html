@@ -30,7 +30,7 @@
                 console.log('Players:', players);
                 const promises = players.map(player => {
                     const [name, realm] = player.split('-');
-                    const url = `https://raider.io/api/v1/characters/profile?region=tw&realm=${realm}&name=${name}&fields=mythic_plus_weekly_highest_level_runs,gear`;
+                    const url = `https://raider.io/api/v1/characters/profile?region=us&realm=${realm}&name=${name}&fields=mythic_plus_weekly_highest_level_runs,gear`;
 
                     return fetch(url)
                         .then(response => response.json())
